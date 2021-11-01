@@ -9,7 +9,8 @@ root = strrep(filename,'.sumocfg','');                      % Routing name for a
 
 % Obtaining number of every entity type for simulation.
 
-[Nped,Npas,Ts] = get_simulation_parameters(root);           % Number of entities and time simulation.
+[Nped,Npas,Nbike,Ts] = get_simulation_parameters(root);
+
 N = floor(Ts/dT);                                           % Total steps simulation.
 
 %% Initializing SUMO tool with TraCI for MATLAB.
@@ -19,7 +20,7 @@ traci.start(['sumo -c ',filename,' --start']);
 
 % Initializing output variables.
 
-receivers_routes = initialize_struct(N,Nped,Npas);          % Output struct with the entities' routes.
+receivers_routes = initialize_struct(N,Nped,Npas,Nbike);    % Output struct with the entities' routes.
 bbox_coordinates = zeros(4,1);                              % Contains the boundaries from the traffic network.
 
 %% Run simulation step by step.
@@ -27,11 +28,10 @@ bbox_coordinates = zeros(4,1);                              % Contains the bound
 bb = cell2mat(traci.simulation.getNetBoundary());           % Getting the boundaries in local coordinates.
 
 [x,y] = traci.simulation.convertGeo(bb(1),bb(2));           % Converting down-left corner to geographical.
-bbox_coordinates(1:2) = [y, x];
+bbox_coordinates(1:2) = [y,x];
 
 [x,y] = traci.simulation.convertGeo(bb(3),bb(4));           % Converting up-right corner to geographical.
-bbox_coordinates(3:4) = [y, x];
-
+bbox_coordinates(3:4) = [y,x];
 
 for i = 1:N                               
     traci.simulation.step(i*dT);                            % Doing a simulation step.
@@ -69,14 +69,16 @@ for i = 1:N
 end
 
 traci.close()
+system('"C:\Windows\System32\taskkill.exe" /F /im cmd.exe &');
 clc;
 
 Te = toc;
 fprintf('Elapsed time: %.2f min.\n',Te/60);
+fprintf('Total entities departed: %d.\n',Nped+Npas+Nbike);
 
 end
 
-function entities_routes = initialize_struct(N,Nped,Npas)
+function entities_routes = initialize_struct(N,Nped,Npas,Nbike)
 
 % initialize_struct - Initialize the struct type for saving the entities
 % routes. It has two fields called pedestrian and passenger. Which one of
@@ -85,12 +87,20 @@ function entities_routes = initialize_struct(N,Nped,Npas)
 
 entities_routes = struct('pedestrians',struct(),'vehicles',struct());  
 
-for i = 0:(Nped-1) 
-    entities_routes.pedestrians.(['ped',num2str(i)]) = NaN*zeros(N,2);
-end
-
 for i = 0:(Npas-1)
     entities_routes.vehicles.(['veh',num2str(i)]) = NaN*zeros(N,2);
+end
+
+if Nped > 0
+    for i = 0:(Nped-1) 
+        entities_routes.pedestrians.(['ped',num2str(i)]) = NaN*zeros(N,2);
+    end
+end
+
+if Nbike > 0
+    for i = 0:(Nbike-1) 
+        entities_routes.vehicles.(['bike',num2str(i)]) = NaN*zeros(N,2);
+    end
 end
 
 end
