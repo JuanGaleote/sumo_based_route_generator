@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2021-11-01 11:34:35 by Eclipse SUMO netconvert Version 1.10.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvert.typ.xml,C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvertUrbanDe.typ.xml,C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvertPedestrians.typ.xml,C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvertShips.typ.xml,C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvertBicycle.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <pedestrian>
+        <crossings.guess value="true"/>
+    </pedestrian>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+        <railway.topology.repair.stop-turn value="true"/>
+    </railway>
+
+    <report>
+        <verbose value="true"/>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="-1401485267" name="Pg Joan de Borbó - Pl del Mar" lane="-902517725#1_1" startPos="36.30" endPos="51.30" friendlyPos="true" lines="V15 V19"/>
+    <busStop id="-1404018064" name="Maremagnum" lane="-126715484#0_1" startPos="27.74" endPos="42.74" friendlyPos="true" lines="V17"/>
+    <busStop id="-30317892" name="Port Vell" lane="-4752296#4_1" startPos="22.01" endPos="37.01" friendlyPos="true" lines="V17"/>
+    <busStop id="-3398923286" name="Canyelles" lane="-332758526#2_0" startPos="9476.94" endPos="9676.94" friendlyPos="true"/>
+    <busStop id="-3398923289" name="Catalunya" lane="-332758526#2_0" startPos="1326.67" endPos="1526.67" friendlyPos="true">
+        <access lane="126336685#14_0" pos="674.79" length="220.71" friendlyPos="1"/>
+        <access lane="545937950#17_0" pos="675.91" length="211.05" friendlyPos="1"/>
+        <access lane="545937950#18_0" pos="0.00" length="219.29" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3398928295" name="Diagonal" lane="-332758526#2_0" startPos="2594.71" endPos="2794.71" friendlyPos="true"/>
+    <busStop id="-3398928297" name="Drassanes" lane="-332758526#2_0" startPos="70.77" endPos="270.77" friendlyPos="true">
+        <access lane="-18596059#1_0" pos="17.62" length="2.75" friendlyPos="1"/>
+        <access lane="126399546#4_0" pos="190.34" length="20.22" friendlyPos="1"/>
+        <access lane="18596059#1_0" pos="15.97" length="14.65" friendlyPos="1"/>
+        <access lane="907164234_0" pos="31.37" length="17.16" friendlyPos="1"/>
+        <access lane="907164235#0_0" pos="17.30" length="14.10" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3398928307" name="Fontana" lane="-332758526#2_0" startPos="3548.00" endPos="3748.00" friendlyPos="true"/>
+    <busStop id="-3398928318" name="Lesseps" lane="-332758526#2_0" startPos="4103.84" endPos="4303.84" friendlyPos="true"/>
+    <busStop id="-3398928319" name="Liceu" lane="-332758526#2_0" startPos="651.70" endPos="851.70" friendlyPos="true">
+        <access lane="-239117583#16_0" pos="408.39" length="8.51" friendlyPos="1"/>
+        <access lane="126336685#14_0" pos="141.87" length="5.38" friendlyPos="1"/>
+        <access lane="239117583#10_0" pos="147.29" length="16.31" friendlyPos="1"/>
+        <access lane="545937950#17_0" pos="142.01" length="6.19" friendlyPos="1"/>
+        <access lane="545937950#18_0" pos="543.22" length="15.24" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3398928324" name="Montbau" lane="-332758526#2_0" startPos="6996.82" endPos="7196.82" friendlyPos="true"/>
+    <busStop id="-3398928325" name="Mundet" lane="-332758526#2_0" startPos="7747.00" endPos="7947.00" friendlyPos="true"/>
+    <busStop id="-3398928329" name="Paral·lel" lane="-332758526#3_0" startPos="0.00" endPos="100.00" friendlyPos="true">
+        <access lane="550734721#2_0" pos="4.48" length="20.65" friendlyPos="1"/>
+        <access lane="550734722#0_0" pos="0.00" length="11.49" friendlyPos="1"/>
+        <access lane="550734722#1_0" pos="4.73" length="11.79" friendlyPos="1"/>
+        <access lane="753508763#3_0" pos="100.16" length="7.64" friendlyPos="1"/>
+        <access lane="86772200#2_0" pos="100.13" length="5.50" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3398928330" name="Passeig de Gràcia" lane="-332758526#2_0" startPos="1992.24" endPos="2192.24" friendlyPos="true"/>
+    <busStop id="-3398928331" name="Penitents" lane="-332758526#2_0" startPos="5595.74" endPos="5795.74" friendlyPos="true"/>
+    <busStop id="-3398928336" name="Poble Sec" lane="-332758526#5_0" startPos="656.84" endPos="856.84" friendlyPos="true">
+        <access lane="48174566#0_0" pos="0.00" length="191.00" friendlyPos="1"/>
+        <access lane="893832411#8_0" pos="145.18" length="281.05" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3398928341" name="Roquetes" lane="-332758526#0_0" startPos="699.68" endPos="899.68" friendlyPos="true"/>
+    <busStop id="-3398928355" name="Trinitat Nova" lane="-332758526#0_0" startPos="1561.65" endPos="1661.65" friendlyPos="true"/>
+    <busStop id="-3398928359" name="Vallcarca" lane="-332758526#2_0" startPos="4892.18" endPos="5092.18" friendlyPos="true"/>
+    <busStop id="-3398928360" name="Valldaura" lane="-332758526#2_0" startPos="8558.84" endPos="8758.84" friendlyPos="true"/>
+    <busStop id="-5310050767" name="Espanya (L3)" lane="-332758526#5_0" startPos="0.00" endPos="100.00" friendlyPos="true"/>
+    <busStop id="-5603009327" name="Moll de la Fusta" lane="-4079513#2_0" startPos="45.08" endPos="60.08" friendlyPos="true" lines="H14 V13"/>
+    <busStop id="-5603009328" name="Pg Colom - Via Laietana" lane="-4079513#3_0" startPos="63.01" endPos="78.01" friendlyPos="true" lines="N6 H14 V13"/>
+    <busStop id="-5643768378" name="Portal de la Pau" lane="-4079513#0_0" startPos="164.10" endPos="173.38" friendlyPos="true" lines="H14 V13"/>
+    <busStop id="-5728520760" name="Pepe Rubianes" lane="-4079509#11_1" startPos="0.00" endPos="10.81" friendlyPos="true" lines="D20 N28 47 59"/>
+    <busStop id="-5728520761" name="Pg Marítim - Pepe Rubianes" lane="-4751867#1_1" startPos="62.95" endPos="77.95" friendlyPos="true" lines="D20 N28 47 59"/>
+    <busStop id="-5728520762" name="Platja de la Barceloneta" lane="-4751867#2_1" startPos="268.30" endPos="283.30" friendlyPos="true" lines="D20 N28 47 59"/>
+    <busStop id="-7778850858" name="Vall d&apos;Hebron" lane="-332758526#2_0" startPos="6438.12" endPos="6638.12" friendlyPos="true"/>
+    <busStop id="-8143303494" name="Pg Joan de Borbó - Moll de Catalunya" lane="-543357596_1" startPos="6.78" endPos="21.78" friendlyPos="true" lines="V15 V19"/>
+    <busStop id="1043786437" name="Paral·lel" lane="38912601#1_0" startPos="8061.59" endPos="8261.59" friendlyPos="true" lines="L3">
+        <access lane="550734719#1_0" pos="99.08" length="11.44" friendlyPos="1"/>
+        <access lane="550734721#2_0" pos="2.61" length="14.79" friendlyPos="1"/>
+        <access lane="550734722#0_0" pos="0.00" length="11.41" friendlyPos="1"/>
+        <access lane="550734722#1_0" pos="4.73" length="2.80" friendlyPos="1"/>
+        <access lane="86772200#2_0" pos="101.24" length="17.14" friendlyPos="1"/>
+    </busStop>
+    <busStop id="104459412" name="La Rambla - Santa Mònica" lane="920602947#8_1" startPos="83.87" endPos="98.72" friendlyPos="true" lines="N9 N12 N15 V13 59"/>
+    <busStop id="108229618" name="Catalunya" lane="38912601#1_0" startPos="6897.70" endPos="6900.64" friendlyPos="true" lines="L3">
+        <access lane="126336685#14_0" pos="674.79" length="93.09" friendlyPos="1"/>
+        <access lane="545937950#17_0" pos="678.27" length="83.40" friendlyPos="1"/>
+        <access lane="545937950#18_0" pos="0.00" length="91.97" friendlyPos="1"/>
+    </busStop>
+    <busStop id="108229629" name="Drassanes" lane="38912601#1_0" startPos="8061.85" endPos="6900.64" friendlyPos="true" lines="L3">
+        <access lane="-18596059#1_0" pos="15.62" length="17.31" friendlyPos="1"/>
+        <access lane="18596059#1_0" pos="17.97" length="0.09" friendlyPos="1"/>
+        <access lane="549832583_0" pos="11.36" length="12.69" friendlyPos="1"/>
+        <access lane="907164234_0" pos="28.34" length="3.01" friendlyPos="1"/>
+        <access lane="916847125_0" pos="5.54" length="28.60" friendlyPos="1"/>
+    </busStop>
+    <busStop id="108253724" name="Vall d&apos;Hebron" lane="38912601#1_0" startPos="1694.32" endPos="1894.32" friendlyPos="true" lines="L3"/>
+    <busStop id="108253730" name="Penitents" lane="38912601#1_0" startPos="2538.46" endPos="2738.46" friendlyPos="true" lines="L3"/>
+    <busStop id="108253748" name="Fontana" lane="38912601#1_0" startPos="4590.61" endPos="4790.61" friendlyPos="true" lines="L3"/>
+    <busStop id="1238021418" name="Canyelles" lane="38912601#0_0" startPos="1801.31" endPos="2001.31" friendlyPos="true" lines="L3"/>
+    <busStop id="1404002861" name="Port Vell" lane="126715484#1_1" startPos="20.38" endPos="35.38" friendlyPos="true" lines="Tourist red"/>
+    <busStop id="1404685236" name="Word Trade Center" lane="32465719#3_1" startPos="44.18" endPos="51.68" friendlyPos="true" lines="Tourist red"/>
+    <busStop id="1417396651" name="Ciutadella" lane="309928148_0" startPos="209516.56" endPos="207510.40" friendlyPos="true"/>
+    <busStop id="1417669619" name="Passeig de Gràcia" lane="38912601#1_0" startPos="6149.69" endPos="6349.69" friendlyPos="true" lines="L3"/>
+    <busStop id="1600966241" lane="345754189_0" startPos="262826.93" endPos="240791.90" friendlyPos="true"/>
+    <busStop id="192327539" name="Metro Paral·lel" lane="880513897#5_1" startPos="103.32" endPos="118.32" friendlyPos="true" lines="88"/>
+    <busStop id="192328375" name="Paral·lel - Cabanes" lane="827052043#3_1" startPos="33.89" endPos="48.89" friendlyPos="true" lines="H14 V11 21"/>
+    <busStop id="2121359758" lane="521511953#0_0" startPos="95.56" endPos="110.56" friendlyPos="true"/>
+    <busStop id="21638918" name="Pg. de Colom-Pl. Portal de la Pau" lane="4079520#1_1" startPos="0.00" endPos="12.95" friendlyPos="true" lines="N0"/>
+    <busStop id="2383559422" name="Bastia-Savona" lane="353875142_0" startPos="638040.99" endPos="604911.94" friendlyPos="true"/>
+    <busStop id="2526271760" name="Poble Sec" lane="38912601#4_0" startPos="505.45" endPos="705.45" friendlyPos="true" lines="L3">
+        <access lane="48174566#0_0" pos="0.00" length="199.11" friendlyPos="1"/>
+        <access lane="893832411#8_0" pos="148.33" length="274.07" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2610196515" name="Joan de Borbó Comte de Barcelona, 21" lane="359739475#3_1" startPos="39.40" endPos="54.40" friendlyPos="true" lines="D20 N28 V15 47 59 V19"/>
+    <busStop id="30717964" name="Puerto de Barcelona" lane="297217667#1_0" startPos="3.12" endPos="15.62" friendlyPos="true"/>
+    <busStop id="3152086907" name="Sète - Quai B" lane="309955227_0" startPos="0.00" endPos="12.50" friendlyPos="true"/>
+    <busStop id="3152278240" name="الجزائر" lane="309939688_0" startPos="0.00" endPos="12.50" friendlyPos="true"/>
+    <busStop id="3397396636" name="Paral·lel" lane="550192971#1_0" startPos="0.00" endPos="96.44" friendlyPos="true" lines="L2">
+        <access lane="550734721#1_0" pos="0.00" length="9.37" friendlyPos="1"/>
+        <access lane="550734723#0_0" pos="0.00" length="7.08" friendlyPos="1"/>
+        <access lane="550734723#1_0" pos="0.20" length="5.76" friendlyPos="1"/>
+        <access lane="789706458#2_0" pos="31.57" length="3.17" friendlyPos="1"/>
+        <access lane="827052044#2_0" pos="38.09" length="2.90" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3397396654" name="Sant Antoni" lane="550192971#0_0" startPos="0.00" endPos="100.00" friendlyPos="true" lines="L2">
+        <access lane="249408854#0_0" pos="0.24" length="102.06" friendlyPos="1"/>
+        <access lane="249408854#1_0" pos="19.65" length="102.94" friendlyPos="1"/>
+        <access lane="4750627#0_0" pos="0.00" length="100.18" friendlyPos="1"/>
+        <access lane="911389013#0_0" pos="0.00" length="97.58" friendlyPos="1"/>
+        <access lane="911389014_0" pos="0.00" length="95.54" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3398923286" name="Canyelles" lane="332758526#1_0" startPos="133.83" endPos="333.83" friendlyPos="true" lines="L3"/>
+    <busStop id="3398923289" name="Catalunya" lane="332758526#1_0" startPos="8284.10" endPos="7330.32" friendlyPos="true" lines="L3">
+        <access lane="126336685#14_0" pos="674.79" length="220.71" friendlyPos="1"/>
+        <access lane="545937950#17_0" pos="675.91" length="211.05" friendlyPos="1"/>
+        <access lane="545937950#18_0" pos="0.00" length="219.29" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3398928295" name="Diagonal" lane="332758526#1_0" startPos="7016.07" endPos="7216.07" friendlyPos="true" lines="L3"/>
+    <busStop id="3398928297" name="Drassanes" lane="332758526#1_0" startPos="9540.01" endPos="7330.32" friendlyPos="true" lines="L3">
+        <access lane="-18596059#1_0" pos="17.62" length="2.75" friendlyPos="1"/>
+        <access lane="126399546#4_0" pos="190.34" length="20.22" friendlyPos="1"/>
+        <access lane="18596059#1_0" pos="15.97" length="14.65" friendlyPos="1"/>
+        <access lane="907164234_0" pos="31.37" length="17.16" friendlyPos="1"/>
+        <access lane="907164235#0_0" pos="17.30" length="14.10" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3398928307" name="Fontana" lane="332758526#1_0" startPos="6062.77" endPos="6262.77" friendlyPos="true" lines="L3"/>
+    <busStop id="3398928318" name="Lesseps" lane="332758526#1_0" startPos="5506.93" endPos="5706.93" friendlyPos="true" lines="L3"/>
+    <busStop id="3398928319" name="Liceu" lane="332758526#1_0" startPos="8959.08" endPos="7330.32" friendlyPos="true" lines="L3">
+        <access lane="-239117583#16_0" pos="408.39" length="8.51" friendlyPos="1"/>
+        <access lane="126336685#14_0" pos="141.87" length="5.38" friendlyPos="1"/>
+        <access lane="239117583#10_0" pos="147.29" length="16.31" friendlyPos="1"/>
+        <access lane="545937950#17_0" pos="142.01" length="6.19" friendlyPos="1"/>
+        <access lane="545937950#18_0" pos="543.22" length="15.24" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3398928324" name="Montbau" lane="332758526#1_0" startPos="2613.96" endPos="2813.96" friendlyPos="true" lines="L3"/>
+    <busStop id="3398928325" name="Mundet" lane="332758526#1_0" startPos="1863.77" endPos="2063.77" friendlyPos="true" lines="L3"/>
+    <busStop id="3398928329" name="Paral·lel" lane="332758526#3_0" startPos="395.06" endPos="476.45" friendlyPos="true" lines="L3">
+        <access lane="550734721#2_0" pos="4.48" length="20.65" friendlyPos="1"/>
+        <access lane="550734722#0_0" pos="0.00" length="11.49" friendlyPos="1"/>
+        <access lane="550734722#1_0" pos="4.73" length="11.79" friendlyPos="1"/>
+        <access lane="753508763#3_0" pos="100.16" length="7.64" friendlyPos="1"/>
+        <access lane="86772200#2_0" pos="100.13" length="5.50" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3398928330" name="Passeig de Gràcia" lane="332758526#1_0" startPos="7618.54" endPos="7330.32" friendlyPos="true" lines="L3"/>
+    <busStop id="3398928331" name="Penitents" lane="332758526#1_0" startPos="4015.04" endPos="4215.04" friendlyPos="true" lines="L3"/>
+    <busStop id="3398928336" name="Poble Sec" lane="332758526#5_0" startPos="495.58" endPos="695.58" friendlyPos="true" lines="L3">
+        <access lane="48174566#0_0" pos="0.00" length="191.00" friendlyPos="1"/>
+        <access lane="893832411#8_0" pos="145.18" length="281.05" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3398928341" name="Roquetes" lane="332758526#0_0" startPos="761.96" endPos="961.96" friendlyPos="true" lines="L3"/>
+    <busStop id="3398928355" name="Trinitat Nova" lane="332758526#0_0" startPos="0.00" endPos="100.00" friendlyPos="true" lines="L3"/>
+    <busStop id="3398928359" name="Vallcarca" lane="332758526#1_0" startPos="4718.60" endPos="4918.60" friendlyPos="true" lines="L3"/>
+    <busStop id="3398928360" name="Valldaura" lane="332758526#1_0" startPos="1051.94" endPos="1251.94" friendlyPos="true" lines="L3"/>
+    <busStop id="3699659474" name="Paral·lel" lane="447856554_0" startPos="0.00" endPos="100.00" friendlyPos="true">
+        <access lane="550734721#1_0" pos="0.00" length="11.22" friendlyPos="1"/>
+        <access lane="550734723#0_0" pos="0.00" length="2.47" friendlyPos="1"/>
+        <access lane="550734723#1_0" pos="0.20" length="6.62" friendlyPos="1"/>
+        <access lane="789706458#2_0" pos="31.57" length="5.26" friendlyPos="1"/>
+        <access lane="827052044#2_0" pos="38.02" length="11.33" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3699659475" name="Trinitat Nova" lane="38912601#0_0" startPos="0.00" endPos="100.00" friendlyPos="true" lines="L3"/>
+    <busStop id="462259779" name="Roquetes" lane="38912601#0_0" startPos="773.78" endPos="973.78" friendlyPos="true" lines="L3"/>
+    <busStop id="462274207" name="Valldaura" lane="38912601#0_0" startPos="2719.01" endPos="2919.01" friendlyPos="true" lines="L3"/>
+    <busStop id="462274208" name="Mundet" lane="38912601#1_0" startPos="380.84" endPos="580.84" friendlyPos="true" lines="L3"/>
+    <busStop id="462274209" name="Montbau" lane="38912601#1_0" startPos="1134.28" endPos="1334.28" friendlyPos="true" lines="L3"/>
+    <busStop id="462274210" name="Vallcarca" lane="38912601#1_0" startPos="3250.54" endPos="3450.54" friendlyPos="true" lines="L3"/>
+    <busStop id="462274211" name="Lesseps" lane="38912601#1_0" startPos="4030.74" endPos="4230.74" friendlyPos="true" lines="L3"/>
+    <busStop id="462274212" name="Diagonal" lane="38912601#1_0" startPos="5548.73" endPos="5748.73" friendlyPos="true" lines="L3"/>
+    <busStop id="462274213" name="Liceu" lane="38912601#1_0" startPos="7490.59" endPos="6900.64" friendlyPos="true" lines="L3">
+        <access lane="-239117583#16_0" pos="408.11" length="21.50" friendlyPos="1"/>
+        <access lane="126336685#14_0" pos="142.07" length="7.62" friendlyPos="1"/>
+        <access lane="239117583#10_0" pos="147.57" length="29.30" friendlyPos="1"/>
+        <access lane="545937950#17_0" pos="142.17" length="19.19" friendlyPos="1"/>
+        <access lane="545937950#18_0" pos="542.95" length="2.24" friendlyPos="1"/>
+    </busStop>
+    <busStop id="468523299" name="Barcelona" lane="82615215_0" startPos="200489.70" endPos="189071.94" friendlyPos="true"/>
+    <busStop id="493812498" name="Moll Sant Bertran - Moll Barcelona" lane="283764989#0_1" startPos="15.30" endPos="29.38" friendlyPos="true"/>
+    <busStop id="5024685799" name="Paral·lel - Vila i Vilà" lane="867009429_1" startPos="31.31" endPos="38.81" friendlyPos="true" lines="88"/>
+    <busStop id="5024685799@7944787" name="Paral·lel - Vila i Vilà" lane="556049572#3_1" startPos="48.96" endPos="56.46" friendlyPos="true" lines="88"/>
+    <busStop id="5024694587" name="Paral·lel - Drassanes" lane="880513895#3_1" startPos="48.27" endPos="63.27" friendlyPos="true" lines="88"/>
+    <busStop id="5026646853" name="Paral·lel - Drassanes" lane="185961564#6_1" startPos="12.73" endPos="27.73" friendlyPos="true" lines="88"/>
+    <busStop id="5081945471" name="Oran وهران" lane="965078020_0" startPos="683075.39" endPos="675064.46" friendlyPos="true"/>
+    <busStop id="5173125170" name="La Rambla - Pl. del Teatre" lane="239117583#5_1" startPos="20.47" endPos="31.65" friendlyPos="true" lines="N9 N12 N15 V13"/>
+    <busStop id="5176810321" name="Colon - Museu Maritim" lane="4079520#1_1" startPos="0.00" endPos="12.95" friendlyPos="true" lines="Tourist red"/>
+    <busStop id="5310050767" name="Espanya (L3)" lane="332758526#5_0" startPos="1252.43" endPos="1352.28" friendlyPos="true" lines="L3"/>
+    <busStop id="5310050887" name="Espanya (L3)" lane="38912601#4_0" startPos="1263.15" endPos="1362.78" friendlyPos="true" lines="L3"/>
+    <busStop id="5368382512" name="Moll Sant Bertran - Moll Barcelona" lane="40653591#3_1" startPos="35.38" endPos="50.38" friendlyPos="true" lines="88"/>
+    <busStop id="5368499197" name="Moll Sant Bertran - Moll Barcelona" lane="283764989#0_1" startPos="18.66" endPos="29.38" friendlyPos="true" lines="88"/>
+    <busStop id="5603006486" name="Ronda Sant Pau - Parlament" lane="246638755#0_1" startPos="0.00" endPos="12.04" friendlyPos="true"/>
+    <busStop id="5603006494" name="Pl. Josep Maria Folch" lane="237649292#0_1" startPos="1.66" endPos="16.66" friendlyPos="true" lines="V11 121"/>
+    <busStop id="5603009323" name="Metro Paral·lel" lane="880513897#5_1" startPos="105.09" endPos="120.09" friendlyPos="true" lines="N0 H14 V11 21"/>
+    <busStop id="5603009324" name="Paral·lel - Drassanes" lane="185961564#6_1" startPos="12.88" endPos="27.88" friendlyPos="true" lines="N0 H14 V11 21"/>
+    <busStop id="5603009325" name="Les Drassanes" lane="8380803#2_1" startPos="0.00" endPos="8.45" friendlyPos="true" lines="N0 H14"/>
+    <busStop id="5609791812" name="Pg Colom - Via Laietana" lane="4079513#3_0" startPos="116.61" endPos="131.61" friendlyPos="true" lines="N0 tornada"/>
+    <busStop id="5609791813" name="Moll de la Fusta" lane="4079513#1_0" startPos="96.42" endPos="111.42" friendlyPos="true" lines="N0 tornada H14 V13 59 120"/>
+    <busStop id="5609791814" name="Portal de la Pau" lane="914891586#2_0" startPos="41.53" endPos="56.53" friendlyPos="true" lines="H14 V13 59 120"/>
+    <busStop id="5609791815" name="Les Drassanes" lane="498952133#1_1" startPos="28.81" endPos="43.81" friendlyPos="true" lines="H14"/>
+    <busStop id="5609791816" name="Paral·lel - Drassanes" lane="880513895#3_1" startPos="48.30" endPos="63.30" friendlyPos="true" lines="H14 V11 21"/>
+    <busStop id="5609791818" name="Paral·lel - Vila i Vilà" lane="867009429_1" startPos="27.84" endPos="42.84" friendlyPos="true" lines="H14 V11 21 D50"/>
+    <busStop id="5609791819" name="Paral·lel - Margarit" lane="542284837#3_1" startPos="35.55" endPos="50.55" friendlyPos="true" lines="V11 D50"/>
+    <busStop id="5643768378" name="Portal de la Pau" lane="914891586#2_0" startPos="41.53" endPos="56.53" friendlyPos="true" lines="N0 tornada"/>
+    <busStop id="6315729763" name="Colom - La Rambla" lane="8380809_1" startPos="20.26" endPos="31.76" friendlyPos="true" lines="N9 N12 N15"/>
+    <busStop id="7778850858" name="Vall d&apos;Hebron" lane="332758526#1_0" startPos="3172.66" endPos="3372.66" friendlyPos="true" lines="L3"/>
+    <busStop id="7802014400" name="Ronda Sant Pau - Paral·lel" lane="881656434#0_1" startPos="8.52" endPos="23.52" friendlyPos="true" lines="21"/>
+    <busStop id="7802032343" name="Pg Marítim - Pepe Rubianes" lane="4751867#1_1" startPos="19.52" endPos="34.52" friendlyPos="true"/>
+    <busStop id="7802032344" name="Pepe Rubianes" lane="4079509#13_1" startPos="0.29" endPos="15.13" friendlyPos="true"/>
+    <busStop id="7802032345" name="Pg Joan de Borbó" lane="291731094#1_1" startPos="29.68" endPos="44.68" friendlyPos="true" lines="V19"/>
+    <busStop id="7802033547" name="Platja de la Barceloneta" lane="4751867#2_1" startPos="114.92" endPos="129.92" friendlyPos="true"/>
+    <busStop id="8081810777" name="Moll Sant Bertran - Moll Barcelona" lane="40653591#3_1" startPos="35.09" endPos="50.09" friendlyPos="true"/>
+    <busStop id="8143303449" name="Pg Joan de Borbó - Pl del Mar" lane="902517725#1_1" startPos="63.93" endPos="78.93" friendlyPos="true" lines="V19"/>
+    <busStop id="8143303492" name="Pg Joan de Borbó - Almirall Aixada" lane="359739476#5_1" startPos="55.57" endPos="70.57" friendlyPos="true" lines="V15 V19"/>
+    <busStop id="8143303493" name="Pg Joan de Borbó - Judici" lane="359739476#1_1" startPos="51.97" endPos="66.97" friendlyPos="true" lines="V15 V19"/>
+    <busStop id="8163708755" name="Paral·lel - Marquès de Campo Sagrado" lane="959788822#2_1" startPos="122.21" endPos="137.21" friendlyPos="true" lines="N0"/>
+    <busStop id="8163708756" name="Paral·lel - Ronda Sant Pau" lane="525586872#2_1" startPos="24.09" endPos="39.09" friendlyPos="true" lines="N0"/>
+    <busStop id="8180094957" name="Ronda Sant Pau - Parlament" lane="246638755#0_1" startPos="76.94" endPos="91.94" friendlyPos="true"/>
+    <busStop id="8180094958" name="Ronda Sant Pau - Folch i Torres" lane="906750214_1" startPos="0.00" endPos="4.31" friendlyPos="true" lines="D50"/>
+    <busStop id="8199235071" name="Ronda Sant Pau - Carrer de les Flors" lane="881656434#0_1" startPos="8.52" endPos="23.52" friendlyPos="true" lines="H14"/>
+    <busStop id="8203768667" name="Moll de Barcelona" lane="882153784_1" startPos="20.39" endPos="27.89" friendlyPos="true" lines="V11"/>
+    <busStop id="8210106346" name="La Rambla - Liceu" lane="239117583#10_1" startPos="0.00" endPos="10.66" friendlyPos="true" lines="N12"/>
+    <busStop id="8210106347" name="La Rambla - Pl del Teatre" lane="239117583#5_1" startPos="20.62" endPos="31.65" friendlyPos="true" lines="N9 N12 N15 V13"/>
+    <busStop id="8220384271" name="Port Vell" lane="4752296#4_1" startPos="42.52" endPos="57.52" friendlyPos="true"/>
+    <busStop id="8234311065" name="Pg de Josep Carner - Pg de Montjuïc" lane="18507616#1_1" startPos="38.12" endPos="53.12" friendlyPos="true" lines="21"/>
+    <busStop id="8234311093" name="Pg de Josep Carner - Jardins de Walter Benjamin" lane="18506598#1_1" startPos="12.64" endPos="27.64" friendlyPos="true" lines="21"/>
+    <busStop id="826085074" name="Pg Joan de Borbó - Almirall Aixada" lane="291731095#1_1" startPos="30.32" endPos="45.32" friendlyPos="true" lines="V19"/>
+    <busStop id="8328305420" name="Rambla del Raval - Hospital" lane="10851770#6_1" startPos="10.38" endPos="25.38" friendlyPos="true"/>
+    <busStop id="8328305421" name="Rambla del Raval - Sant Josep Oriol" lane="10851770#0_1" startPos="14.20" endPos="29.20" friendlyPos="true"/>
+    <busStop id="8328305422" name="Av Drassanes - Nou de la Rambla" lane="239662764#4_1" startPos="46.36" endPos="61.36" friendlyPos="true"/>
+    <busStop id="8328305423" name="Metro Drassanes" lane="239662764#1_1" startPos="28.10" endPos="41.64" friendlyPos="true"/>
+    <busStop id="8328305424" name="Pl del Duc de Medinaceli" lane="235748487#5_1" startPos="26.88" endPos="41.39" friendlyPos="true"/>
+    <busStop id="8328305425" name="Pl de la Mercè" lane="235748487#1_1" startPos="23.99" endPos="37.31" friendlyPos="true"/>
+    <busStop id="8328305426" name="Ample - Fusteria" lane="4746868#0_1" startPos="13.83" endPos="28.83" friendlyPos="true"/>
+    <busStop id="8328305433" name="Av Drassanes - Pl Portal de la Pau" lane="217108057#0_1" startPos="0.00" endPos="13.00" friendlyPos="true" lines="120"/>
+    <busStop id="8328305434" name="Av Drassanes - Arc del Teatre" lane="11297310#1_1" startPos="64.24" endPos="79.24" friendlyPos="true" lines="120"/>
+    <busStop id="8328305435" name="Rambla del Raval - Sant Pau" lane="10851731#10_1" startPos="57.03" endPos="66.94" friendlyPos="true" lines="120"/>
+    <busStop id="8328305436" name="Rambla del Raval - Aurora" lane="10851731#2_1" startPos="4.15" endPos="19.15" friendlyPos="true" lines="120"/>
+    <busStop id="8330812747" name="Nou de la Rambla - Paral·lel" lane="261716933#1_1" startPos="33.34" endPos="48.34" friendlyPos="true" lines="121"/>
+    <busStop id="8330812748" name="Pg de Montjuïc - Nou de la Rambla" lane="314839726#2_1" startPos="67.54" endPos="82.54" friendlyPos="true" lines="121"/>
+    <busStop id="8330812749" name="Piquer - Cabanes" lane="4746227#4_1" startPos="10.38" endPos="25.38" friendlyPos="true" lines="121"/>
+    <busStop id="8330812750" name="Vila i Vilà - Puigxuriguer" lane="553309964#1_1" startPos="28.36" endPos="42.71" friendlyPos="true" lines="121"/>
+    <busStop id="8330812751" name="Vila i Vilà - Mata" lane="136362730#8_1" startPos="6.62" endPos="21.62" friendlyPos="true" lines="121"/>
+    <busStop id="8330812752" name="Vila i Vilà - Lafont" lane="136362730#2_1" startPos="17.03" endPos="32.03" friendlyPos="true" lines="121"/>
+    <busStop id="8330812753" name="CAP Les Hortes" lane="314839720#1_1" startPos="23.30" endPos="38.30" friendlyPos="true" lines="121"/>
+    <busStop id="8330812754" name="Elkano - Poeta Cabanyes" lane="553305787#4_1" startPos="7.74" endPos="22.74" friendlyPos="true" lines="121"/>
+    <busStop id="8330812755" name="Elkano - Blasco de Garay" lane="48174566#0_1" startPos="177.70" endPos="192.70" friendlyPos="true" lines="121"/>
+    <busStop id="8357830511" name="Av Miramar - Pl Carlos Ibáñez" lane="246548945#0_1" startPos="92.86" endPos="107.86" friendlyPos="true" lines="150"/>
+    <busStop id="8371290346" name="Pg. Colom-Port Vell" lane="4079520#1_1" startPos="0.00" endPos="12.95" friendlyPos="true" lines="N0 tornada"/>
+</additional>

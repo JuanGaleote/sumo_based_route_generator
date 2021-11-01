@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2021-11-01 11:34:35 by Eclipse SUMO netconvert Version 1.10.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvert.typ.xml,C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvertUrbanDe.typ.xml,C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvertPedestrians.typ.xml,C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvertShips.typ.xml,C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvertBicycle.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <pedestrian>
+        <crossings.guess value="true"/>
+    </pedestrian>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+        <railway.topology.repair.stop-turn value="true"/>
+    </railway>
+
+    <report>
+        <verbose value="true"/>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<ptLines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/ptlines_file.xsd">
+    <ptLine id="1076403" line="Tourist red" type="bus" vClass="bus" completeness="0.14">
+        <route edges="246548945#0 246548945#1 246548945#2 126754105 557129738 44866134 -43269996 -126754494 126754493 18507616#0 18507616#1 18507616#3 18507616#4 548337280 294871189 283764975 450445885#2 542623450#0 542623450#1 542623450#2 542623450#3 542623450#4 542623450#5 882153784 32465719#1 32465719#2 32465719#3 32465719#4 32465719#5 32465719#6 32465719#7 32465719#8 450445884 283764988 283764975 245672930 498952133#0 498952133#1 4079520#0 4079520#1 474464196#2 474464196#3 474464196#4 474464196#5 474464196#6 4752296#0 4752296#3 4752296#4 4752296#5 4752296#6 427046677#1 126715484#1 -126715484#0 -427046677#0 -4752296#5 -4752296#4 -4752296#3 -4752296#2"/>
+        <busStop id="1404685236" name="Word Trade Center"/>
+        <busStop id="5176810321" name="Colon - Museu Maritim"/>
+        <busStop id="1404002861" name="Port Vell"/>
+    </ptLine>
+    <ptLine id="195705" name="L3: Zona Universitària =&gt; Trinitat Nova" line="L3" type="subway" vClass="rail_urban" completeness="0.73">
+        <route edges="38912601#0 38912601#1 38912601#3 38912601#4"/>
+        <busStop id="3699659475" name="Trinitat Nova"/>
+        <busStop id="462259779" name="Roquetes"/>
+        <busStop id="1238021418" name="Canyelles"/>
+        <busStop id="462274207" name="Valldaura"/>
+        <busStop id="462274208" name="Mundet"/>
+        <busStop id="462274209" name="Montbau"/>
+        <busStop id="108253724" name="Vall d&apos;Hebron"/>
+        <busStop id="108253730" name="Penitents"/>
+        <busStop id="462274210" name="Vallcarca"/>
+        <busStop id="462274211" name="Lesseps"/>
+        <busStop id="108253748" name="Fontana"/>
+        <busStop id="462274212" name="Diagonal"/>
+        <busStop id="1417669619" name="Passeig de Gràcia"/>
+        <busStop id="108229618" name="Catalunya"/>
+        <busStop id="462274213" name="Liceu"/>
+        <busStop id="108229629" name="Drassanes"/>
+        <busStop id="1043786437" name="Paral·lel"/>
+        <busStop id="2526271760" name="Poble Sec"/>
+        <busStop id="5310050887" name="Espanya (L3)"/>
+    </ptLine>
+    <ptLine id="195707" name="L2: Paral·lel =&gt; Badalona Pompeu Fabra" line="L2" type="subway" vClass="rail_urban" completeness="0.06">
+        <route edges="447856554"/>
+        <busStop id="3699659474" name="Paral·lel"/>
+    </ptLine>
+    <ptLine id="3418866" name="D20: Pg. Marítim =&gt; Ernest Lluch" line="D20" type="bus" vClass="bus" completeness="0.07">
+        <route edges="-4751867#2 -4751867#1 -4751867#0 -4079509#24 -4079509#23 -4079509#22 -4079509#21 -4079509#19 -4079509#18 -4079509#17 -4079509#16 -4079509#15 -4079509#14 -4079509#13 -4079509#12 -4079509#11 -4079509#10 -4079509#9 -4079509#8 -4079509#7 -4079509#6 -4079509#5 -4079509#4 -4079509#3 -4079509#2 359739475#0 359739475#1 359739475#2 359739475#3 359739475#4 -4079513#3 -4079513#2 -4079513#1 -4079513#0 -914891586#1 -914891586#0 245672931#0 245672931#2 246638753 8380803#2 309051278#2 462400263 185961564#3 185961564#5 185961564#6 880513897#2 880513897#3 880513897#5 827052044#2 525586872#2 959788822#2"/>
+        <busStop id="-5728520762" name="Platja de la Barceloneta"/>
+        <busStop id="-5728520761" name="Pg Marítim - Pepe Rubianes"/>
+        <busStop id="-5728520760" name="Pepe Rubianes"/>
+        <busStop id="2610196515" name="Joan de Borbó Comte de Barcelona, 21"/>
+    </ptLine>
+    <ptLine id="4671268" name="L2: Badalona Pompeu Fabra =&gt; Paral·lel" line="L2" type="subway" vClass="rail_urban" completeness="0.11">
+        <route edges="550192971#0 550192971#1"/>
+        <busStop id="3397396654" name="Sant Antoni"/>
+        <busStop id="3397396636" name="Paral·lel"/>
+    </ptLine>
+    <ptLine id="4673508" name="L3: Trinitat Nova =&gt; Zona Universitària" line="L3" type="subway" vClass="rail_urban" completeness="0.73">
+        <route edges="332758526#0 332758526#1 332758526#3 332758526#4 332758526#5"/>
+        <busStop id="5310050767" name="Espanya (L3)"/>
+        <busStop id="-3398928336" name="Poble Sec"/>
+        <busStop id="-3398928329" name="Paral·lel"/>
+        <busStop id="-3398928297" name="Drassanes"/>
+        <busStop id="-3398928319" name="Liceu"/>
+        <busStop id="-3398923289" name="Catalunya"/>
+        <busStop id="-3398928330" name="Passeig de Gràcia"/>
+        <busStop id="-3398928295" name="Diagonal"/>
+        <busStop id="3398928307" name="Fontana"/>
+        <busStop id="-3398928318" name="Lesseps"/>
+        <busStop id="-3398928359" name="Vallcarca"/>
+        <busStop id="-3398928331" name="Penitents"/>
+        <busStop id="7778850858" name="Vall d&apos;Hebron"/>
+        <busStop id="-3398928324" name="Montbau"/>
+        <busStop id="-3398928325" name="Mundet"/>
+        <busStop id="-3398928360" name="Valldaura"/>
+        <busStop id="3398923286" name="Canyelles"/>
+        <busStop id="-3398928341" name="Roquetes"/>
+        <busStop id="3398928355" name="Trinitat Nova"/>
+    </ptLine>
+    <ptLine id="7463588" name="D20: Ernest Lluch =&gt; Pg. Marítim" line="D20" type="bus" vClass="bus" completeness="0.00">
+        <route edges="542284837#0 542284837#3 556049572#2 556049572#3 867009429 86772200#2 827052043#2 827052043#3 827052043#6 880513895#2 880513895#3 880513895#6 880513895#8 8380793 548337280 294871189 283764975 245672930 498952133#0 498952133#1 4079520#0 4079520#1 914891586#0 914891586#1 914891586#2 4079513#1 4079513#2 4079513#3 291731094#0 291731094#1 291731094#2 902517724#0 906391081 4079509#1 4079509#3 4079509#4 4079509#5 4079509#6 4079509#7 4079509#8 4079509#9 4079509#10 4079509#11 4079509#12 4079509#13 4079509#14 4079509#15 4079509#16 4079509#17 4079509#18 4079509#19 4079509#21 4079509#22 4079509#23 4079509#24 4751867#0 4751867#1 4751867#2"/>
+    </ptLine>
+    <ptLine id="7463692" name="N0 Portal de la Pau =&gt; Portal de la Pau. anada" line="N0" type="bus" vClass="bus" completeness="0.06">
+        <route edges="4079520#1 245672931#0 245672931#2 246638753 8380803#2 309051278#2 462400263 185961564#3 185961564#5 185961564#6 880513897#2 880513897#3 880513897#5 827052044#2 525586872#2 959788822#2 -4079513#3 -4079513#2 -4079513#1 -4079513#0 -914891586#1 -914891586#0 245672931#0 245672931#2 246638753 4079520#0 4079520#1"/>
+        <busStop id="21638918" name="Pg. de Colom-Pl. Portal de la Pau"/>
+        <busStop id="5603009325" name="Les Drassanes"/>
+        <busStop id="5603009324" name="Paral·lel - Drassanes"/>
+        <busStop id="5603009323" name="Metro Paral·lel"/>
+        <busStop id="8163708756" name="Paral·lel - Ronda Sant Pau"/>
+        <busStop id="8163708755" name="Paral·lel - Marquès de Campo Sagrado"/>
+    </ptLine>
+    <ptLine id="7508020" name="N0 Portal de la Pau =&gt; Portal de la Pau. tornada" line="N0 tornada" type="bus" vClass="bus" completeness="0.04">
+        <route edges="4079520#1 914891586#0 914891586#1 914891586#2 4079513#1 4079513#2 4079513#3 542284837#0 542284837#3 556049572#2 556049572#3 867009429 86772200#2 827052043#2 827052043#3 827052043#6 880513895#2 880513895#3 880513895#6 880513895#8 8380793 548337280 294871189 283764975 245672930 498952133#0 498952133#1 4079520#0 4079520#1"/>
+        <busStop id="8371290346" name="Pg. Colom-Port Vell"/>
+        <busStop id="5643768378" name="Portal de la Pau"/>
+        <busStop id="5609791813" name="Moll de la Fusta"/>
+        <busStop id="5609791812" name="Pg Colom - Via Laietana"/>
+    </ptLine>
+    <ptLine id="7577463" name="N6 Barcelona (Roquetes-Pl. Catalunya) =&gt; Santa Coloma G. (Oliveres)" line="N6" type="bus" vClass="bus" completeness="0.00">
+        <route edges="542284837#0 542284837#3 556049572#2 556049572#3 867009429 86772200#2 827052043#2 827052043#3 827052043#6 880513895#2 880513895#3 880513895#6 880513895#8 8380793 548337280 294871189 283764975 245672930 498952133#0 498952133#1 4079520#0 4079520#1 914891586#0 914891586#1 914891586#2 4079513#1 4079513#2 4079513#3"/>
+    </ptLine>
+    <ptLine id="7584221" name="N6 Santa Coloma (Oliveres) =&gt; Barcelona (Roquetes-Pl.Catalunya)" line="N6" type="bus" vClass="bus" completeness="0.01">
+        <route edges="-4079513#3 -4079513#2 -4079513#1 -4079513#0 -914891586#1 -914891586#0 245672931#0 245672931#2 246638753 8380803#2 309051278#2 462400263 185961564#3 185961564#5 185961564#6 880513897#2 880513897#3 880513897#5 827052044#2 881656434#0 237649291#2 237649292#0 237649292#1 906750214 237649293#0 237649293#1 237649293#3 246638755#0"/>
+        <busStop id="-5603009328" name="Pg Colom - Via Laietana"/>
+    </ptLine>
+    <ptLine id="7642731" name="N9 Barcelona (Pl. Portal de la Pau-Pl. Catalunya) =&gt; Tiana (Edith Llaurador)" line="N9" type="bus" vClass="bus" completeness="0.02">
+        <route edges="8380809 239117583#0 239117583#1 239117583#2 239117583#3 239117583#4 239117583#5 239117583#6 239117583#7 239117583#8 239117583#9 239117583#10"/>
+        <busStop id="6315729763" name="Colom - La Rambla"/>
+        <busStop id="5173125170" name="La Rambla - Pl. del Teatre"/>
+        <busStop id="8210106347" name="La Rambla - Pl del Teatre"/>
+    </ptLine>
+    <ptLine id="7656613" name="N9 Tiana (Edith Llaurador) =&gt; Barcelona (Pl. Catalunya-Pl. Portal de la Pau)" line="N9" type="bus" vClass="bus" completeness="0.01">
+        <route edges="920602947#0 920602947#4 920602947#5 920602947#7 920602947#8 920602947#9 906395262#0 906395262#1 906395262#2 239117584#0 246638753 4079520#0 4079520#1 8380809"/>
+        <busStop id="104459412" name="La Rambla - Santa Mònica"/>
+        <busStop id="6315729763" name="Colom - La Rambla"/>
+    </ptLine>
+    <ptLine id="7710778" name="N12 Barcelona (Pl. Portal de la Pau-Pl.Catalunya) =&gt; St. Feliu de Llobregat (La Salut)" line="N12" type="bus" vClass="bus" completeness="0.04">
+        <route edges="8380809 239117583#0 239117583#1 239117583#2 239117583#3 239117583#4 239117583#5 239117583#6 239117583#7 239117583#8 239117583#9 239117583#10"/>
+        <busStop id="6315729763" name="Colom - La Rambla"/>
+        <busStop id="8210106347" name="La Rambla - Pl del Teatre"/>
+        <busStop id="5173125170" name="La Rambla - Pl. del Teatre"/>
+        <busStop id="8210106346" name="La Rambla - Liceu"/>
+    </ptLine>
+    <ptLine id="7711068" name="N12 St. Feliu de Llobregat (La Salut) =&gt; Barcelona (Pl. Catalunya-Pl-Portal de La Pau)" line="N12" type="bus" vClass="bus" completeness="0.02">
+        <route edges="920602947#0 920602947#4 920602947#5 920602947#7 920602947#8 920602947#9 906395262#0 906395262#1 906395262#2 239117584#0 246638753 4079520#0 4079520#1 8380809"/>
+        <busStop id="104459412" name="La Rambla - Santa Mònica"/>
+        <busStop id="6315729763" name="Colom - La Rambla"/>
+    </ptLine>
+    <ptLine id="7731412" name="N15 Barcelona (Pl. Portal de la Pau-Pl. Catalunya) =&gt; Sant Joan Despi (Torreblanca)" line="N15" type="bus" vClass="bus" completeness="0.03">
+        <route edges="8380809 239117583#0 239117583#1 239117583#2 239117583#3 239117583#4 239117583#5 239117583#6 239117583#7 239117583#8 239117583#9 239117583#10"/>
+        <busStop id="6315729763" name="Colom - La Rambla"/>
+        <busStop id="5173125170" name="La Rambla - Pl. del Teatre"/>
+        <busStop id="8210106347" name="La Rambla - Pl del Teatre"/>
+    </ptLine>
+    <ptLine id="7731696" name="N15 Sant Joan Despi (Torreblanca) =&gt; Barcelona (Pl- Catalunya-Pl. Portal de la Pau)" line="N15" type="bus" vClass="bus" completeness="0.02">
+        <route edges="920602947#0 920602947#4 920602947#5 920602947#7 920602947#8 920602947#9 906395262#0 906395262#1 906395262#2 239117584#0 246638753 4079520#0 4079520#1 8380809"/>
+        <busStop id="104459412" name="La Rambla - Santa Mònica"/>
+        <busStop id="6315729763" name="Colom - La Rambla"/>
+    </ptLine>
+    <ptLine id="7746509" name="N28 Collblanc =&gt; Pl. Catalunya =&gt; Port Olímpic" line="N28" type="bus" vClass="bus" completeness="0.00">
+        <route edges="291731094#0 291731094#1 291731094#2 902517724#0 906391081 4079509#1 4079509#3 4079509#4 4079509#5 4079509#6 4079509#7 4079509#8 4079509#9 4079509#10 4079509#11 4079509#12 4079509#13 4079509#14 4079509#15 4079509#16 4079509#17 4079509#18 4079509#19 4079509#21 4079509#22 4079509#23 4079509#24 4751867#0 4751867#1 4751867#2"/>
+    </ptLine>
+    <ptLine id="7746558" name="N28 Port Olímpic =&gt; Pl. Catalunya =&gt; Collblanc" line="N28" type="bus" vClass="bus" completeness="0.06">
+        <route edges="-4751867#2 -4751867#1 -4751867#0 -4079509#24 -4079509#23 -4079509#22 -4079509#21 -4079509#19 -4079509#18 -4079509#17 -4079509#16 -4079509#15 -4079509#14 -4079509#13 -4079509#12 -4079509#11 -4079509#10 -4079509#9 -4079509#8 -4079509#7 -4079509#6 -4079509#5 -4079509#4 -4079509#3 -4079509#2 359739475#0 359739475#1 359739475#2 359739475#3 359739475#4"/>
+        <busStop id="-5728520762" name="Platja de la Barceloneta"/>
+        <busStop id="-5728520761" name="Pg Marítim - Pepe Rubianes"/>
+        <busStop id="-5728520760" name="Pepe Rubianes"/>
+        <busStop id="2610196515" name="Joan de Borbó Comte de Barcelona, 21"/>
+    </ptLine>
+    <ptLine id="7752499" name="H14: Paral·lel =&gt; Sant Adrià" line="H14" type="bus" vClass="bus" completeness="0.14">
+        <route edges="881656434#0 237649291#2 237649292#0 237649292#1 906750214 4745952#3 4745952#5 542284838#0 542284838#1 542284838#2 542284838#3 556049572#2 556049572#3 867009429 86772200#2 827052043#2 827052043#3 827052043#6 880513895#2 880513895#3 880513895#6 880513895#8 8380793 548337280 294871189 283764975 245672930 498952133#0 498952133#1 4079520#0 4079520#1 914891586#0 914891586#1 914891586#2 4079513#1 4079513#2 4079513#3"/>
+        <busStop id="8199235071" name="Ronda Sant Pau - Carrer de les Flors"/>
+        <busStop id="5609791818" name="Paral·lel - Vila i Vilà"/>
+        <busStop id="192328375" name="Paral·lel - Cabanes"/>
+        <busStop id="5609791816" name="Paral·lel - Drassanes"/>
+        <busStop id="5609791815" name="Les Drassanes"/>
+        <busStop id="5609791814" name="Portal de la Pau"/>
+        <busStop id="5609791813" name="Moll de la Fusta"/>
+    </ptLine>
+    <ptLine id="7752596" name="H14: Sant Adrià =&gt; Paral·lel" line="H14" type="bus" vClass="bus" completeness="0.14">
+        <route edges="-4079513#3 -4079513#2 -4079513#1 -4079513#0 -914891586#1 -914891586#0 245672931#0 245672931#2 246638753 8380803#2 309051278#2 462400263 185961564#3 185961564#5 185961564#6 880513897#2 880513897#3 880513897#5 827052044#2 881656434#0"/>
+        <busStop id="-5603009328" name="Pg Colom - Via Laietana"/>
+        <busStop id="-5603009327" name="Moll de la Fusta"/>
+        <busStop id="-5643768378" name="Portal de la Pau"/>
+        <busStop id="5603009325" name="Les Drassanes"/>
+        <busStop id="5603009324" name="Paral·lel - Drassanes"/>
+        <busStop id="5603009323" name="Metro Paral·lel"/>
+        <busStop id="8199235071" name="Ronda Sant Pau - Carrer de les Flors"/>
+    </ptLine>
+    <ptLine id="7757226" name="V11: Estació Marìtima (WTC) =&gt; Bonanova" line="V11" type="bus" vClass="bus" completeness="0.11">
+        <route edges="882153784 32465719#1 32465719#2 32465719#3 32465719#4 32465719#5 32465719#6 32465719#7 32465719#8 450445884 283764988 283764975 245672930 498952132 294871187#0 294871187#1 462400263 185961564#3 185961564#5 185961564#6 880513897#2 880513897#3 880513897#5 827052044#2 881656434#0 237649291#2 237649292#0 237649292#1 906750214 237649293#0 237649293#1 237649293#3 246638755#0"/>
+        <busStop id="8203768667" name="Moll de Barcelona"/>
+        <busStop id="5603009324" name="Paral·lel - Drassanes"/>
+        <busStop id="5603009323" name="Metro Paral·lel"/>
+        <busStop id="5603006494" name="Pl. Josep Maria Folch"/>
+    </ptLine>
+    <ptLine id="7758770" name="V11 Bonanova =&gt; Estació Marítima (WTC)" line="V11" type="bus" vClass="bus" completeness="0.12">
+        <route edges="542284837#0 542284837#3 556049572#2 556049572#3 867009429 86772200#2 827052043#2 827052043#3 827052043#6 880513895#2 880513895#3 880513895#6 880513895#8 8380793 548337280 294871189 283764975 450445885#2 542623450#0 542623450#1 542623450#2 542623450#3 542623450#4 542623450#5 882153784"/>
+        <busStop id="5609791819" name="Paral·lel - Margarit"/>
+        <busStop id="5609791818" name="Paral·lel - Vila i Vilà"/>
+        <busStop id="192328375" name="Paral·lel - Cabanes"/>
+        <busStop id="5609791816" name="Paral·lel - Drassanes"/>
+        <busStop id="8203768667" name="Moll de Barcelona"/>
+    </ptLine>
+    <ptLine id="7761038" name="V13 Pla de Palau =&gt; Av. Tibidabo" line="V13" type="bus" vClass="bus" completeness="0.09">
+        <route edges="-4079513#3 -4079513#2 -4079513#1 -4079513#0 -914891586#1 -914891586#0 8380809 239117583#0 239117583#1 239117583#2 239117583#3 239117583#4 239117583#5 239117583#6 239117583#7 239117583#8 239117583#9 239117583#10"/>
+        <busStop id="-5603009328" name="Pg Colom - Via Laietana"/>
+        <busStop id="-5603009327" name="Moll de la Fusta"/>
+        <busStop id="-5643768378" name="Portal de la Pau"/>
+        <busStop id="5173125170" name="La Rambla - Pl. del Teatre"/>
+        <busStop id="8210106347" name="La Rambla - Pl del Teatre"/>
+    </ptLine>
+    <ptLine id="7761466" name="V13 Av. Tibidabo =&gt; Pla de Palau" line="V13" type="bus" vClass="bus" completeness="0.06">
+        <route edges="920602947#0 920602947#4 920602947#5 920602947#7 920602947#8 920602947#9 906395262#0 906395262#1 906395262#2 239117584#0 246638753 4079520#0 4079520#1 914891586#0 914891586#1 914891586#2 4079513#1 4079513#2 4079513#3"/>
+        <busStop id="104459412" name="La Rambla - Santa Mònica"/>
+        <busStop id="5609791814" name="Portal de la Pau"/>
+        <busStop id="5609791813" name="Moll de la Fusta"/>
+    </ptLine>
+    <ptLine id="7797707" name="V15 Barceloneta =&gt; Av. Tibidabo" line="V15" type="bus" vClass="bus" completeness="0.10">
+        <route edges="-4079500#1 -4079500#0 -543357596 -423227070#3 -423227070#2 -423227070#1 -423227070#0 -902517725#2 -902517725#1 -902517725#0 423227071 997213890#0 997213890#1 545922500#0 545922500#1 359739476#0 359739476#1 359739476#3 359739476#5 359739475#0 359739475#1 359739475#2 359739475#3 359739475#4"/>
+        <busStop id="-8143303494" name="Pg Joan de Borbó - Moll de Catalunya"/>
+        <busStop id="-1401485267" name="Pg Joan de Borbó - Pl del Mar"/>
+        <busStop id="8143303493" name="Pg Joan de Borbó - Judici"/>
+        <busStop id="8143303492" name="Pg Joan de Borbó - Almirall Aixada"/>
+        <busStop id="2610196515" name="Joan de Borbó Comte de Barcelona, 21"/>
+    </ptLine>
+    <ptLine id="7798308" name="V15 Av. Tibidabo =&gt; Barceloneta" line="V15" type="bus" vClass="bus" completeness="0.00">
+        <route edges="291731094#0 291731094#1 291731094#2 902517724#0 906391081 291731095#1 291731095#2 291731096#1 291731096#2 359735830#0 359735830#1 359735827#0 359735827#1 359735827#2 902517725#0 902517725#1 902517725#2 423227070#0 423227070#1 423227070#2 423227070#3 423227070#4 4079500#0 4079500#1"/>
+    </ptLine>
+    <ptLine id="7802544" name="V17 Port Vell =&gt; Vall d&apos;Hebron" line="V17" type="bus" vClass="bus" completeness="0.04">
+        <route edges="-126715484#0 -427046677#0 -4752296#5 -4752296#4 -4752296#3 -4752296#2"/>
+        <busStop id="-1404018064" name="Maremagnum"/>
+        <busStop id="-30317892" name="Port Vell"/>
+    </ptLine>
+    <ptLine id="7802565" name="V17 Vall d&apos;Hebron =&gt; Port Vell" line="V17" type="bus" vClass="bus" completeness="0.00">
+        <route edges="4752296#0 4752296#3 4752296#4 4752296#5 4752296#6 427046677#1 126715484#1"/>
+    </ptLine>
+    <ptLine id="7828750" name="21 Paral·lel / El Prat" line="21" type="bus" vClass="bus" completeness="0.08">
+        <route edges="18506914 18507616#0 18507616#1 18507616#3 18507616#4 548337280 294871189 283764975 245672930 498952132 294871187#0 294871187#1 462400263 185961564#3 185961564#5 185961564#6 880513897#2 880513897#3 880513897#5 827052044#2 881656434#0"/>
+        <busStop id="8234311065" name="Pg de Josep Carner - Pg de Montjuïc"/>
+        <busStop id="5603009324" name="Paral·lel - Drassanes"/>
+        <busStop id="5603009323" name="Metro Paral·lel"/>
+        <busStop id="7802014400" name="Ronda Sant Pau - Paral·lel"/>
+    </ptLine>
+    <ptLine id="7828751" name="21 Paral·lel / El Prat" line="21" type="bus" vClass="bus" completeness="0.09">
+        <route edges="881656434#0 237649291#2 237649292#0 237649292#1 906750214 4745952#3 4745952#5 542284838#0 542284838#1 542284838#2 542284838#3 556049572#2 556049572#3 867009429 86772200#2 827052043#2 827052043#3 827052043#6 880513895#2 880513895#3 880513895#6 880513895#8 8380793 18506598#0 18506598#1 18506598#2 18506598#3 79304108#1 79304108#2 4746860"/>
+        <busStop id="7802014400" name="Ronda Sant Pau - Paral·lel"/>
+        <busStop id="5609791818" name="Paral·lel - Vila i Vilà"/>
+        <busStop id="192328375" name="Paral·lel - Cabanes"/>
+        <busStop id="5609791816" name="Paral·lel - Drassanes"/>
+        <busStop id="8234311093" name="Pg de Josep Carner - Jardins de Walter Benjamin"/>
+    </ptLine>
+    <ptLine id="7845869" name="47 Pg. Marítim =&gt; Canyelles" line="47" type="bus" vClass="bus" completeness="0.05">
+        <route edges="-4751867#2 -4751867#1 -4751867#0 -4079509#24 -4079509#23 -4079509#22 -4079509#21 -4079509#19 -4079509#18 -4079509#17 -4079509#16 -4079509#15 -4079509#14 -4079509#13 -4079509#12 -4079509#11 -4079509#10 -4079509#9 -4079509#8 -4079509#7 -4079509#6 -4079509#5 -4079509#4 -4079509#3 -4079509#2 359739475#0 359739475#1 359739475#2 359739475#3 359739475#4"/>
+        <busStop id="-5728520762" name="Platja de la Barceloneta"/>
+        <busStop id="-5728520761" name="Pg Marítim - Pepe Rubianes"/>
+        <busStop id="-5728520760" name="Pepe Rubianes"/>
+        <busStop id="2610196515" name="Joan de Borbó Comte de Barcelona, 21"/>
+    </ptLine>
+    <ptLine id="7845876" name="47 Canyelles =&gt; Pg. Marítim" line="47" type="bus" vClass="bus" completeness="0.00">
+        <route edges="291731094#0 291731094#1 291731094#2 902517724#0 906391081 4079509#1 4079509#3 4079509#4 4079509#5 4079509#6 4079509#7 4079509#8 4079509#9 4079509#10 4079509#11 4079509#12 4079509#13 4079509#14 4079509#15 4079509#16 4079509#17 4079509#18 4079509#19 4079509#21 4079509#22 4079509#23 4079509#24 4751867#0 4751867#1 4751867#2"/>
+    </ptLine>
+    <ptLine id="7857239" name="59 Pl. Reina Maria Cristina =&gt; Poblenou" line="59" type="bus" vClass="bus" completeness="0.04">
+        <route edges="920602947#0 920602947#4 920602947#5 920602947#7 920602947#8 920602947#9 906395262#0 906395262#1 906395262#2 239117584#0 246638753 4079520#0 4079520#1 914891586#0 914891586#1 914891586#2 4079513#1 4079513#2 4079513#3 291731094#0 291731094#1 291731094#2 902517724#0 906391081 4079509#1 4079509#3 4079509#4 4079509#5 4079509#6 4079509#7 4079509#8 4079509#9 4079509#10 4079509#11 4079509#12 4079509#13 4079509#14 4079509#15 4079509#16 4079509#17 4079509#18 4079509#19 4079509#21 4079509#22 4079509#23 4079509#24 4751867#0 4751867#1 4751867#2"/>
+        <busStop id="104459412" name="La Rambla - Santa Mònica"/>
+        <busStop id="5609791814" name="Portal de la Pau"/>
+        <busStop id="5609791813" name="Moll de la Fusta"/>
+    </ptLine>
+    <ptLine id="7857240" name="59 Poblenou =&gt; Pl. Reina Maria Cristina" line="59" type="bus" vClass="bus" completeness="0.06">
+        <route edges="-4751867#2 -4751867#1 -4751867#0 -4079509#24 -4079509#23 -4079509#22 -4079509#21 -4079509#19 -4079509#18 -4079509#17 -4079509#16 -4079509#15 -4079509#14 -4079509#13 -4079509#12 -4079509#11 -4079509#10 -4079509#9 -4079509#8 -4079509#7 -4079509#6 -4079509#5 -4079509#4 -4079509#3 -4079509#2 359739475#0 359739475#1 359739475#2 359739475#3 359739475#4 -4079513#3 -4079513#2 -4079513#1 -4079513#0 -914891586#1 -914891586#0 8380809 239117583#0 239117583#1 239117583#2 239117583#3 239117583#4 239117583#5 239117583#6 239117583#7 239117583#8 239117583#9 239117583#10"/>
+        <busStop id="-5728520762" name="Platja de la Barceloneta"/>
+        <busStop id="-5728520761" name="Pg Marítim - Pepe Rubianes"/>
+        <busStop id="-5728520760" name="Pepe Rubianes"/>
+        <busStop id="2610196515" name="Joan de Borbó Comte de Barcelona, 21"/>
+    </ptLine>
+    <ptLine id="7875101" name="150 Castell de Montjuïc =&gt; Pl. Espanya" line="150" type="bus" vClass="bus" completeness="0.04">
+        <route edges="246548945#0 246548945#1 246548945#2 126754105 557129738 550888669#0 550888669#1 294123479#0 294123479#1 294123479#2 44866135 -246548945#2 -246548945#1 -246548945#0"/>
+        <busStop id="8357830511" name="Av Miramar - Pl Carlos Ibáñez"/>
+    </ptLine>
+    <ptLine id="7904162" name="120 Mercat Sant Antoni =&gt; Ciutat Vella" line="120" type="bus" vClass="bus" completeness="0.16">
+        <route edges="-10428122#1 10851731#1 10851731#2 10851731#3 10851731#4 10851731#5 10851731#6 10851731#7 10851731#8 10851731#9 10851731#10 553234917#0 10851867#1 10851867#3 10851867#4 11297310#1 11297310#2 11297310#3 11297310#4 295215796#1 217108057#0 217108057#1 239117584#0 246638753 4079520#0 4079520#1 914891586#0 914891586#1 914891586#2 4079513#1 4079513#2 4079513#3"/>
+        <busStop id="8328305436" name="Rambla del Raval - Aurora"/>
+        <busStop id="8328305435" name="Rambla del Raval - Sant Pau"/>
+        <busStop id="8328305434" name="Av Drassanes - Arc del Teatre"/>
+        <busStop id="8328305433" name="Av Drassanes - Pl Portal de la Pau"/>
+        <busStop id="5609791814" name="Portal de la Pau"/>
+        <busStop id="5609791813" name="Moll de la Fusta"/>
+    </ptLine>
+    <ptLine id="7904194" name="120 Ciutat Vella =&gt; Mercat Sant Antoni" line="120" type="bus" vClass="bus" completeness="0.00">
+        <route edges="4746868#0 4746868#1 235748487#0 235748487#1 235748487#2 235748487#4 235748487#5 235748484#2 235748484#3 235748484#4 18833221#0 553238924#0 8380809 241975841#0 241975841#1 -217108057#1 -217108057#0 217108056#0 239662764#1 239662764#2 239662764#3 239662764#4 -10851867#4 -10851867#3 -10851867#1 246630085#2 10851770#0 10851770#2 10851770#3 10851770#5 10851770#6 10851770#7 10851770#8 10428122#1"/>
+    </ptLine>
+    <ptLine id="7904802" name="121 Mercat Sant Antoni =&gt; Poble Sec" line="121" type="bus" vClass="bus" completeness="0.23">
+        <route edges="48174566#0 553305787#1 553305787#4 553305787#7 553305786#0 140318962#1 140318962#2 314839720#1 314839720#2 76168863#1 76168863#4 76168863#6 76168863#7 76168863#9 76168863#10 136362730#0 136362730#1 136362730#2 136362730#3 136362730#4 136362730#5 136362730#6 136362730#7 136362730#8 136362730#9 553309964#0 553309964#1"/>
+        <busStop id="8330812755" name="Elkano - Blasco de Garay"/>
+        <busStop id="8330812754" name="Elkano - Poeta Cabanyes"/>
+        <busStop id="8330812753" name="CAP Les Hortes"/>
+        <busStop id="8330812752" name="Vila i Vilà - Lafont"/>
+        <busStop id="8330812751" name="Vila i Vilà - Mata"/>
+        <busStop id="8330812750" name="Vila i Vilà - Puigxuriguer"/>
+    </ptLine>
+    <ptLine id="7904821" name="121 Poble Sec =&gt; Mercat Sant Antoni" line="121" type="bus" vClass="bus" completeness="0.42">
+        <route edges="553309964#1 896218296#1 553309965#0 553309963#0 553309963#1 4746227#0 4746227#1 4746227#2 4746227#3 4746227#4 4746227#5 553309960#0 553309960#1 314839726#0 314839726#1 314839726#2 76168863#1 76168863#4 76168863#6 76168863#7 76168863#9 76168863#10 261716933#0 261716933#1 553309959#0 553309959#1 827052044#2 881656434#0 237649291#2 237649292#0 237649292#1 906750214 237649293#0 237649293#1 237649293#3 246638755#0"/>
+        <busStop id="8330812750" name="Vila i Vilà - Puigxuriguer"/>
+        <busStop id="8330812749" name="Piquer - Cabanes"/>
+        <busStop id="8330812748" name="Pg de Montjuïc - Nou de la Rambla"/>
+        <busStop id="8330812747" name="Nou de la Rambla - Paral·lel"/>
+        <busStop id="5603006494" name="Pl. Josep Maria Folch"/>
+    </ptLine>
+    <ptLine id="7937767" name="88 Barcelona (Metro Paral·lel) =&gt; El Prat de Ll. (Zal/Edifici PIF)" line="88" type="bus" vClass="bus" completeness="0.10">
+        <route edges="867009429 86772200#2 827052043#2 827052043#3 827052043#6 880513895#2 880513895#3 880513895#6 880513895#8 8380793 548337280 18508391#0 18508391#1 40653591#0 40653591#1 40653591#3 49542094#0 49542094#1 49542094#2"/>
+        <busStop id="5024685799" name="Paral·lel - Vila i Vilà"/>
+        <busStop id="5024694587" name="Paral·lel - Drassanes"/>
+        <busStop id="5368382512" name="Moll Sant Bertran - Moll Barcelona"/>
+    </ptLine>
+    <ptLine id="7944787" name="88 El Prat de Ll. (Zal/Edifici PIF) =&gt; Barcelona (Metro Paral·lel)" line="88" type="bus" vClass="bus" completeness="0.17">
+        <route edges="49542094#2 297207987#1 49542095#0 49542095#1 49542095#2 49542095#4 283764989#0 283764989#1 283764988 283764975 245672930 498952132 294871187#0 294871187#1 462400263 185961564#3 185961564#5 185961564#6 880513897#2 880513897#3 880513897#5 827052044#2 881656434#0 237649291#2 237649292#0 237649292#1 906750214 4745952#3 4745952#5 542284838#0 542284838#1 542284838#2 542284838#3 556049572#2 556049572#3"/>
+        <busStop id="5368499197" name="Moll Sant Bertran - Moll Barcelona"/>
+        <busStop id="5026646853" name="Paral·lel - Drassanes"/>
+        <busStop id="192327539" name="Metro Paral·lel"/>
+        <busStop id="5024685799@7944787" name="Paral·lel - Vila i Vilà"/>
+    </ptLine>
+    <ptLine id="8407498" name="D50: Paral·lel =&gt; Ciutat Meridiana" line="D50" type="bus" vClass="bus" completeness="0.01">
+        <route edges="906750214 237649293#0 237649293#1 237649293#3 246638755#0"/>
+        <busStop id="8180094958" name="Ronda Sant Pau - Folch i Torres"/>
+    </ptLine>
+    <ptLine id="8408115" name="D50: Ciutat Meridiana =&gt; Paral·lel" line="D50" type="bus" vClass="bus" completeness="0.03">
+        <route edges="542284837#0 542284837#3 556049572#2 556049572#3 867009429 881656434#0 237649291#2 237649292#0 237649292#1 906750214"/>
+        <busStop id="5609791819" name="Paral·lel - Margarit"/>
+        <busStop id="5609791818" name="Paral·lel - Vila i Vilà"/>
+        <busStop id="8180094958" name="Ronda Sant Pau - Folch i Torres"/>
+    </ptLine>
+    <ptLine id="9060580" name="V19 Barceloneta =&gt; Pl. Alfonso Comín" line="V19" type="bus" vClass="bus" completeness="0.07">
+        <route edges="-4079500#1 -4079500#0 -543357596 -423227070#3 -423227070#2 -423227070#1 -423227070#0 -902517725#2 -902517725#1 -902517725#0 423227071 997213890#0 997213890#1 545922500#0 545922500#1 359739476#0 359739476#1 359739476#3 359739476#5 359739475#0 359739475#1 359739475#2 359739475#3 359739475#4"/>
+        <busStop id="-8143303494" name="Pg Joan de Borbó - Moll de Catalunya"/>
+        <busStop id="-1401485267" name="Pg Joan de Borbó - Pl del Mar"/>
+        <busStop id="8143303493" name="Pg Joan de Borbó - Judici"/>
+        <busStop id="8143303492" name="Pg Joan de Borbó - Almirall Aixada"/>
+        <busStop id="2610196515" name="Joan de Borbó Comte de Barcelona, 21"/>
+    </ptLine>
+    <ptLine id="9060665" name="V19 Pl. Alfonso Comín =&gt; Barceloneta" line="V19" type="bus" vClass="bus" completeness="0.04">
+        <route edges="291731094#0 291731094#1 291731094#2 902517724#0 906391081 291731095#1 291731095#2 291731096#1 291731096#2 359735830#0 359735830#1 359735827#0 359735827#1 359735827#2 902517725#0 902517725#1 902517725#2 423227070#0 423227070#1 423227070#2 423227070#3 423227070#4 4079500#0 4079500#1"/>
+        <busStop id="7802032345" name="Pg Joan de Borbó"/>
+        <busStop id="826085074" name="Pg Joan de Borbó - Almirall Aixada"/>
+        <busStop id="8143303449" name="Pg Joan de Borbó - Pl del Mar"/>
+    </ptLine>
+</ptLines>
