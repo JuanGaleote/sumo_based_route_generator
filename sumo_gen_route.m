@@ -1,7 +1,13 @@
-function [receivers_routes, bbox_coordinates] = sumo_gen_route(filename,dT)
+function [receivers_routes, bbox_coordinates, Ntot] = sumo_gen_route(filename,dT)
 
-% Explanation of the function has to be here.
-tic;
+% sumo_gen_route - This function returns the routes followed by all the
+% entities along the simulation network. It retrieve them in an struct,
+% identifying their names, type and geographical coordinates in a
+% latitude-longitude pair. In addition, also returns the bounding box
+% coordinates from the network and the total departed entities. You can
+% specify the step simulation for saving data with dT variable.
+
+tic;                                                        % Counting the time execution for simulate.
 
 %% Initializing basic parameters.
 
@@ -9,7 +15,7 @@ root = strrep(filename,'.sumocfg','');                      % Routing name for a
 
 % Obtaining number of every entity type for simulation.
 
-[Nped,Npas,Nbike,Ts] = get_simulation_parameters(root);
+[Ne,Ts] = get_simulation_parameters(root);                  % Sim. time and entities initial number.
 
 N = floor(Ts/dT);                                           % Total steps simulation.
 
@@ -20,7 +26,7 @@ traci.start(['sumo -c ',filename,' --start']);
 
 % Initializing output variables.
 
-receivers_routes = initialize_struct(N,Nped,Npas,Nbike);    % Output struct with the entities' routes.
+receivers_routes = initialize_struct(N,Ne);                 % Output struct with the entities' routes.
 bbox_coordinates = zeros(4,1);                              % Contains the boundaries from the traffic network.
 
 %% Run simulation step by step.
@@ -72,35 +78,99 @@ traci.close()
 system('"C:\Windows\System32\taskkill.exe" /F /im cmd.exe &');
 clc;
 
+receivers_routes = delete_empty(receivers_routes,N);        % Delete non departed entities fields.
+
+Nveh = length(fieldnames(receivers_routes.vehicles));       % Finally departed entities number.
+Nped = length(fieldnames(receivers_routes.pedestrians));
+Ntot = Nveh + Nped;
+
 Te = toc;
 fprintf('Elapsed time: %.2f min.\n',Te/60);
-fprintf('Total entities departed: %d.\n',Nped+Npas+Nbike);
+fprintf('Total entities departed: %d.\n',Ntot);
+
+save([root,'.mat'],'receivers_routes','bbox_coordinates','Ntot');
 
 end
 
-function entities_routes = initialize_struct(N,Nped,Npas,Nbike)
+function entities_routes = initialize_struct(N,Ne)
 
 % initialize_struct - Initialize the struct type for saving the entities
 % routes. It has two fields called pedestrian and passenger. Which one of
 % them has, also, many fields named with the corresponding entity content
-% the pair latitude-longitude for it.
+% the latitude-longitude pair for it.
 
 entities_routes = struct('pedestrians',struct(),'vehicles',struct());  
 
-for i = 0:(Npas-1)
+for i = 0:(Ne(1)-1)
     entities_routes.vehicles.(['veh',num2str(i)]) = NaN*zeros(N,2);
 end
 
-if Nped > 0
-    for i = 0:(Nped-1) 
-        entities_routes.pedestrians.(['ped',num2str(i)]) = NaN*zeros(N,2);
-    end
+for i = 0:(Ne(2)-1)
+    entities_routes.pedestrians.(['ped',num2str(i)]) = NaN*zeros(N,2);
 end
 
-if Nbike > 0
-    for i = 0:(Nbike-1) 
-        entities_routes.vehicles.(['bike',num2str(i)]) = NaN*zeros(N,2);
+for i = 0:(Ne(3)-1)
+    entities_routes.vehicles.(['bike',num2str(i)]) = NaN*zeros(N,2);
+end
+
+for i = 0:(Ne(4)-1)
+    entities_routes.vehicles.(['bus',num2str(i)]) = NaN*zeros(N,2);
+end
+
+for i = 0:(Ne(5)-1)
+    entities_routes.vehicles.(['moto',num2str(i)]) = NaN*zeros(N,2);
+end
+
+for i = 0:(Ne(6)-1)
+    entities_routes.vehicles.(['urban',num2str(i)]) = NaN*zeros(N,2);
+end
+
+for i = 0:(Ne(7)-1)
+    entities_routes.vehicles.(['ship',num2str(i)]) = NaN*zeros(N,2);
+end
+
+for i = 0:(Ne(8)-1)
+    entities_routes.vehicles.(['truck',num2str(i)]) = NaN*zeros(N,2);
+end
+
+end
+
+function entities_routes = delete_empty(struct,N)
+
+% delete_empty - Remove all entities fields which has not be departed along
+% the simulation. The function search for full NaN arrays for deduce that
+% fact and delete the corresponding field.
+
+entities_routes = struct;
+
+% Pedestrians.
+
+fields = fieldnames(struct.pedestrians);                    % Extracting entities name.
+
+for i = 1:length(fields)                                    % Searching for empty coordinates array.
+    name = cell2mat(fields(i));
+    coordinates = struct.pedestrians.(name);
+    aux = sum(isnan(coordinates),'all');
+    
+    if aux == 2*N
+        entities_routes.pedestrians = rmfield(entities_routes.pedestrians,name);
     end
+
+end
+
+% Vehicles.
+
+fields = fieldnames(struct.vehicles);                       % Extracting entities name.
+
+for i = 1:length(fields)                                    % Searching for empty coordinates array.
+    name = cell2mat(fields(i));
+    coordinates = struct.vehicles.(name);
+    aux = sum(isnan(coordinates),'all');
+    
+    if aux == 2*N
+        entities_routes.vehicles = rmfield(entities_routes.vehicles,name);
+    end
+
 end
 
 end
