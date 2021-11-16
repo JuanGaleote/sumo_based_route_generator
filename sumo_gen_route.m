@@ -1,11 +1,12 @@
-function [receivers_routes, bbox_coordinates, Ntot] = sumo_gen_route(filename,dT)
+function [receivers_routes, bbox_coordinates, Ntot, Ts] = sumo_gen_route(filename,dT)
 
 % sumo_gen_route - This function returns the routes followed by all the
 % entities along the simulation network. It retrieve them in an struct,
 % identifying their names, type and geographical coordinates in a
 % latitude-longitude pair. In addition, also returns the bounding box
 % coordinates from the network and the total departed entities. You can
-% specify the step simulation for saving data with dT variable.
+% specify the step simulation for saving data with dT variable. Always will
+% be returned the total time for simulation.
 
 tic;                                                        % Counting the time execution for simulate.
 
@@ -17,7 +18,7 @@ root = strrep(filename,'.sumocfg','');                      % Routing name for a
 
 [Ne,Ts] = get_simulation_parameters(root);                  % Sim. time and entities initial number.
 
-N = floor(Ts/dT);                                           % Total steps simulation.
+N = floor(Ts/dT) + 1;                                       % Total steps simulation (including final time).
 
 %% Initializing SUMO tool with TraCI for MATLAB.
 
@@ -48,7 +49,7 @@ for i = 1:N
     Nped_act = length(list);                                % Total pedestrian number in actual time.
     
     for j = 1:Nped_act
-        ped_id = cell2mat(list(j));                         % ID of the current pedestrian in analysis.
+        ped_id = list{j};                                   % ID of the current pedestrian in analysis.
         
         pos = traci.person.getPosition(ped_id);             % Getting its position in local coordinates.
         [x,y] = traci.simulation.convertGeo(pos(1),pos(2)); % Converting them to geographical coordinates.
@@ -63,7 +64,7 @@ for i = 1:N
     Npas_act = length(list);                                % Total vehicle number in actual time.
     
     for j = 1:Npas_act
-        veh_id = cell2mat(list(j));                         % ID of the current vehicle in analysis.
+        veh_id = list{j};                                   % ID of the current vehicle in analysis.
         
         pos = traci.vehicle.getPosition(veh_id);            % Getting its position in local coordinates.
         [x,y] = traci.simulation.convertGeo(pos(1),pos(2)); % Converting them to geographical coordinates.
@@ -88,7 +89,7 @@ Te = toc;
 fprintf('Elapsed time: %.2f min.\n',Te/60);
 fprintf('Total entities departed: %d.\n',Ntot);
 
-save([root,'.mat'],'receivers_routes','bbox_coordinates','Ntot');
+save([root,'.mat'],'receivers_routes','bbox_coordinates','Ntot','Ts','dT');
 
 end
 
@@ -148,7 +149,7 @@ entities_routes = struct;
 fields = fieldnames(struct.pedestrians);                    % Extracting entities name.
 
 for i = 1:length(fields)                                    % Searching for empty coordinates array.
-    name = cell2mat(fields(i));
+    name = fields{i};
     coordinates = struct.pedestrians.(name);
     aux = sum(isnan(coordinates),'all');
     
@@ -163,7 +164,7 @@ end
 fields = fieldnames(struct.vehicles);                       % Extracting entities name.
 
 for i = 1:length(fields)                                    % Searching for empty coordinates array.
-    name = cell2mat(fields(i));
+    name = fields{i};
     coordinates = struct.vehicles.(name);
     aux = sum(isnan(coordinates),'all');
     
