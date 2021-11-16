@@ -14,3 +14,8 @@ Previoulsy, generate a traffic network with SUMO (the best way is to use the OSM
 ### RELEASE 1.0 DETAILS ###
 
 - Import Public Transport option from OSM Web Wizard tool has not support, so please don't mark it when generate traffic networks.
+
+### RELEASE 1.1 DETAILS ###
+
+- Adding a .mat file creator which contains the following data: receivers_routes, bbox_coordinates, Ntot, Ts, dT. These variables refers to the entities routes, the bounding box of the network, the total departed entities, the total simulation time and the step time for simulation respectively.
+- Adding to the output variables the Ts (time simulation).
