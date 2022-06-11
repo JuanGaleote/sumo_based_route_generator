@@ -1,4 +1,4 @@
-# sumo_based_route_generator
+# SUMO-Based Route Generator
 
 A soft package developed in MATLAB for generating real traffic routes for pedestrian, cars, bikes, trucks... based on SUMO simulator from Eclipse.
 Needed to be install before using:
